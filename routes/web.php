@@ -18,3 +18,14 @@ Route::get('/', function () {
 });
 
 Route::get('third/practice','thirdController@index');
+
+Route::get('third/practice1','thirdController@practice1');
+Route::post('third/practice1','thirdController@practice1post');
+
+Route::get('third/practiceif','thirdController@practiceif');
+Route::post('third/practiceif','thirdController@practiceifpost');
+
+Route::get('third/practiceif2','thirdController@practiceif2');
+Route::post('third/practiceif2','thirdController@practiceif2post');
+
+Route::get('third/for','thirdController@practicefor');

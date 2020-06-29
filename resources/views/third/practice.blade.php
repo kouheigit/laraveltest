@@ -5,7 +5,7 @@
 @section('content')
 
  <body>
-   <h1>Blade/Index</h1>
+   <h1>Blade/practice</h1>
    <p>{{$msg}}</p>
  </body>
 

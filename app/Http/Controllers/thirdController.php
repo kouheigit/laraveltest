@@ -7,11 +7,60 @@ use Illuminate\Http\Request;
 class thirdController extends Controller
 {
 
-  public function index(Request $request){
+	public function index(Request $request)
+	{
 
 	$data = [
 		'msg'=>'これはbladeを利用したサンプルです',
 	];
 	return view('third.practice',$data);
-  }
+        }
+	//以下重要(practice1メソット）
+        public function practice1(Request $request)
+	{
+		$data = [
+		'msg'=>'名前を入力しよう',
+	        ];
+		return view('third.practice1',$data);
+	}
+
+	public function practice1post(Request $request)
+	{
+		$msg = $request->msg;
+		$data = [
+		'msg'=>'こんにちわ'. $msg .'さん',
+	];
+		return view('third.practice1',$data);
+	}
+
+	public function practiceif(Request $request)
+	{
+		return view('third.practiceif',['msg'=>'']);
+	}
+
+	public function practiceifpost(Request $request)
+	{
+		return view('third.practiceif',['msg'=>$request->msg]);
+	}
+	public function practiceif2()
+	{
+		return view('third.practiceif2');
+	}
+
+	public function practiceif2post(Request $request)
+	{
+		return view('third.practiceif2',['msg'=>$request->msg]);
+	}
+
+	public function practiceforeach()
+	{
+		$data = ['one','two','tree','four','five'];
+		return view('third.foreach',['data'=>$data]);
+	}
+
+	public function practicefor()
+	{
+		return view('third.for');
+	}
+
 }
