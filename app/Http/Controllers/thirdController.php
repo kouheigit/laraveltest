@@ -62,5 +62,21 @@ class thirdController extends Controller
 	{
 		return view('third.for');
 	}
+	public function foreach2()
+	{
+	        $data = ['one','two','tree','four','five'];
+		return view('third.foreach2',compact('data'));
+	}
+	
+	public function practicewhile()
+	{
+		$data = ['one','two','tree','four','five'];
+                return view('third.while',compact('data'));
+
+	}
+	public function practicelayout()
+	{
+		return view('third.practicelayout');
+	}
 
 }

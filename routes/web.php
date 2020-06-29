@@ -29,3 +29,11 @@ Route::get('third/practiceif2','thirdController@practiceif2');
 Route::post('third/practiceif2','thirdController@practiceif2post');
 
 Route::get('third/for','thirdController@practicefor');
+
+Route::get('third/foreach2','thirdController@foreach2');
+
+Route::get('third/while','thirdController@practicewhile');
+
+
+Route::get('third/practicelayout','thirdController@practicelayout');
+
