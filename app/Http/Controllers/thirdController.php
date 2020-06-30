@@ -87,7 +87,9 @@ class thirdController extends Controller
 	     ['name'=>'田中花子','mail'=>'hanako@gmail.com'],
 	     ['name'=>'鈴木さちこ','mail'=>'satiko@gmail.com'],
         ];
-	return view('third.practicemessage',['data'=>$data]);
+	//	return view('third.practicemessage',['data'=>$data]);
+	return view('third.practicemessage',compact('data'));
+
 	 
 	}
 

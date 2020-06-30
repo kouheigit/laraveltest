@@ -8,7 +8,6 @@
 @section('content')
  <p>ここにコンテンツの本文のコンテンツ</p>
  <p>必要なだけ記述する</p>
- @each('third.item',$data,'item')  
 
 @component('third.message')
    @slot('msg_title') 
@@ -16,6 +15,7 @@
    @endslot
   @slot('msg_content')
    これはコンテンツの本文です
+  @each('third.item',$data,'item')
   @endslot
 @endcomponent
 
