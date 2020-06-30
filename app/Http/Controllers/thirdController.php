@@ -74,9 +74,16 @@ class thirdController extends Controller
                 return view('third.while',compact('data'));
 
 	}
+
 	public function practicelayout()
 	{
 		return view('third.practicelayout');
 	}
+
+	public function practicemessage()
+	{
+		return view('third.practicemessage');
+	}
+
 
 }

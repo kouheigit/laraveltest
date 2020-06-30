@@ -34,6 +34,7 @@ Route::get('third/foreach2','thirdController@foreach2');
 
 Route::get('third/while','thirdController@practicewhile');
 
-
 Route::get('third/practicelayout','thirdController@practicelayout');
+
+Route::get('third/practicemessage','thirdController@practicemessage');
 
