@@ -8,9 +8,5 @@
     <p class="msg_title">{{$msg_title}}</p>
     <p class="msg_content">{{$msg_content}}</p>
  </div>
- <li>
-    {{$item['name']}}
-    {{$item['mail']}}
- </li>
  </body>
 </html>

@@ -8,12 +8,12 @@
 @section('content')
  <p>ここにコンテンツの本文のコンテンツ</p>
  <p>必要なだけ記述する</p>
+ @each('third.item',$data,'item')  
 
 @component('third.message')
    @slot('msg_title') 
     分離したコンテンツの表題部分
    @endslot
-
   @slot('msg_content')
    これはコンテンツの本文です
   @endslot
