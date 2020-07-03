@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Middleware\fourthMiddleware;
+//use App\Http\Middleware\forth1;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -38,5 +39,19 @@ Route::get('third/practicelayout','thirdController@practicelayout');
 
 Route::get('third/practicemessage','thirdController@practicemessage');
 
-Route::get('fourth','fourthController@index')
-->middleware(fourthMiddleware::class);
+Route::get('fourth','fourthController@index');
+
+Route::get('fourth/middle','fourthController@middle');
+
+Route::get('fourth/vali','fourthController@vali');
+Route::post('fourth/vali','fourthController@valipost');
+
+Route::get('fourth/vali1','fourthController@vali1');
+Route::post('fourth/vali1','fourthController@vali1post');
+
+Route::get('fourth/vali2','fourthController@vali2');
+Route::post('fourth/vali2','fourthController@vali2post');
+
+Route::get('fourth/vali3','fourthController@vali3');
+Route::post('fourth/vali3','fourthController@vali3post');
+
