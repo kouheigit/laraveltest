@@ -30,7 +30,7 @@ class vali2Request extends FormRequest
         return [
 	'name'=>'required',
 	'mail'=>'email',
-	'age.between'=>'nurmeric|between:0,150',
+	'age.between'=>'nurmeric|hello',
         ];
 
     }
@@ -41,6 +41,7 @@ class vali2Request extends FormRequest
 		    'name.required'=>'名前は必ず入力して下さい',
 		    'mail.email'=>'メールアドレスが必要です',
 		    'age.between'=>'年齢は0~150の間で入力して下さい',
+		    'age.hello'=>'Hello! 入力して下さい',
 	    ];
     }
-}
+ }
