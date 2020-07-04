@@ -55,3 +55,6 @@ Route::post('fourth/vali2','fourthController@vali2post');
 Route::get('fourth/vali3','fourthController@vali3');
 Route::post('fourth/vali3','fourthController@vali3post');
 
+Route::get('fourth/valiX','fourthController@valiX');
+Route::post('fourth/valiX','fourthController@valiXpost');
+
