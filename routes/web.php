@@ -58,3 +58,16 @@ Route::post('fourth/vali3','fourthController@vali3post');
 Route::get('fourth/valiX','fourthController@valiX');
 Route::post('fourth/valiX','fourthController@valiXpost');
 
+Route::get('five/db','fiveController@db');
+
+Route::get('five/db1','fiveController@db1');
+
+Route::get('five/db2','fiveController@db2');
+
+Route::get('five/dbori','fiveController@dbori');
+Route::post('five/dbori','fiveController@dbori2');
+
+Route::get('five/db3','fiveController@db3');
+
+
+
