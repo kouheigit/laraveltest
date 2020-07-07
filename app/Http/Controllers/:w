@@ -64,26 +64,11 @@ class fiveController extends Controller
 	public function db4post(Request $request)
 	{
 		$name = $request->input('name');
-		 $items = DB::table('people')
+		 $item = DB::table('people')
 		->where('name','like','%' .$name . '%')
 		->orwhere('mail','like', '%'.$name . '%')
 		->get();
-	    return view('five.db4post',compact('items'));
+	    return view('five.db4post',compact('item'));
 	}
 
-	public function db5(Request $request)
-	{
-		return view('five.db5');
-	}
-
-	public function db5post(Request $request)
-	{
-		$min = $request->input('min');
-		$max = $request->input('max');
-		$items = DB::table('people')
-			->whereRaw('age >= ? and age <= ?',
-				[$min,$max])->get();
-		return view('five.db5post',compact('items'));
-
-	}
 }
