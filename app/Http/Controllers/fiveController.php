@@ -86,4 +86,15 @@ class fiveController extends Controller
 		return view('five.db5post',compact('items'));
 
 	}
+
+	public function db6(Request $request)
+	{
+		return view('five.db6');
+	}
+	
+	public function db6post(Request $request)
+	{
+		$items = $request->input::get('a');
+		return view('five.db6post',compact('items'));
+	}
 }
