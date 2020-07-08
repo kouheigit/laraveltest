@@ -86,15 +86,89 @@ class fiveController extends Controller
 		return view('five.db5post',compact('items'));
 
 	}
-
+	//クエリストリングでの値の受け渡し
 	public function db6(Request $request)
 	{
-		return view('five.db6');
+	    $value = $request->input('value');
+	      if($value==1){
+			$items = DB::table('people')->orderBy('age','asc')->get();
+	          }elseif($value==0){
+			$items = DB::table('people')->orderBy('age','desc')->get();
+		}
+	
+		return view('five.db6')->with('val', $items);
+	}
+
+	public function db7(Request $request)
+	{
+		return view('five.db7');
+	}
+
+	public function db7post(Request $request)
+	{
+		$page = $request->input('page');
+		$items = DB::table('people')
+		->offset($page * 3)
+		->limit(3)
+		->get();
+		return view('five.db7post',compact('items'));
+	}
+
+	public function db8(Request $request)
+	{
+		return view('five.db8');
+	}
+
+	public function db8post(Request $request)
+	{
+		$param = [
+			'name'=> $request->name,
+			'mail'=> $request->mail,
+			'age'=>$request->age,
+		];
+		DB::table('people')->insert($param);
+		return redirect('/five/db1');
 	}
 	
-	public function db6post(Request $request)
+	public function db9(Request $request)
 	{
-		$items = $request->input::get('a');
-		return view('five.db6post',compact('items'));
+		return view('five.db9');
 	}
+        
+        public function db9edit(Request $request)
+	{
+	   $id = $request->input('id');
+	   $items = DB::table('people')->where('id',$id)->get();
+	   if($id!=null){
+		   return view('/five/db9edit',compact('items'));
+	    //以下が一切反応しない↓
+	   }else{
+           $id = $request->input('id');
+	   $name = $request->input('name');
+	   $mail = $request->input('mail');
+	   $age = $request->input('age');
+	 	  
+		$param = [
+			$id,	
+			$name,
+			$mail,
+			$age,
+		];
+		DB::table('people')->insert($param);
+		return redirect('/five/db1');
+	 }
+	}
+/*
+
+        public function db9creat(Request $request)
+	{
+	    $atai = [
+		$id = $request->input('id'),
+		$name = $request->input('name'),
+		$mail = $request->input('mail'),
+               ];
+		DB::table('people')->insert($atai);
+	    return redirect('/five/db1');
+
+	}	*/
 }

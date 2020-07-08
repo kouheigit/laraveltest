@@ -10,6 +10,7 @@
     <td width="50px">{{ optional($item)->id }}</td>
     <tr><th width="50px">name:</th>
     <td width="50px">{{ optional($item)->name }}</td>
+
   </table>
   @endforeach
  @endif
