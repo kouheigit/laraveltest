@@ -2,22 +2,18 @@
 
 <h1>OOKAWA DB9</h1>
 @section('content')
-
  <table>
     {{ csrf_field() }}
-    {{$start}}
-@if ($start == null)
-<form action="/five/db9" method="get">
+
+<!--  <form action="/five/db9" method="get">
    <h1>id:</h1>
    <input type="text" name="id" method="get">
-   <input type="hidden" name="start" method="get"value="1">
    <input type="submit" value="send">
- </table>
-@endif
+ </table>-->
 
-@if ($items!=null)
+ @if ($items != null)
  @foreach ($items as $item)
- <form action"/five/db9" method="post">
+ <form action"/five/db9post" method="get">
    <table width="400px">
      <tr><th width="50px">id:</th>
       <td width="50px">{{ optional($item)->id }}</td>

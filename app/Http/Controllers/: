@@ -129,23 +129,18 @@ class fiveController extends Controller
 		DB::table('people')->insert($param);
 		return redirect('/five/db1');
 	}
-        //情報の更新の際に使用するメソット	
+	
 	public function db9(Request $request)
 	{
-		$id = $request->input('id');
-		$start =1;
-		$start = $request->input('start');	
-		$name = $request->input('name');
-	        $mail = $request->input('mail');
-		$age = $request->input('age');
-		$items = DB::table('people')
-			->where('id',$request->id)->get();
-	 	 return view('five.db9',compact('items','start','name'));
+	  $items= [
+		$id = $request->input('id'),
+		$name = $request->input('name'),
+		$mail = $request->input('mail'),
+		$age = $request->input('age'),
+	];
+	
+		return view('five.db9',compact('items'));
 	}
 
-	public function db9post(Request $request)
-	{
-		return redirect('/five/db1');
-	}
 
 }

@@ -69,5 +69,19 @@ Route::post('five/dbori','fiveController@dbori2');
 
 Route::get('five/db3','fiveController@db3');
 
+Route::get('five/db4','fiveController@db4');
+Route::post('five/db4post','fiveController@db4post');
 
+Route::get('five/db5','fiveController@db5');
+Route::post('five/db5post','fiveController@db5post');
 
+Route::get('five/db6','fiveController@db6');
+
+Route::get('five/db7','fiveController@db7');
+Route::post('five/db7post','fiveController@db7post');
+
+Route::get('five/db8','fiveController@db8');
+Route::post('five/db8post','fiveController@db8post');
+
+Route::get('five/db9','fiveController@db9');
+Route::post('five/db9post','fiveController@db9post'); 
