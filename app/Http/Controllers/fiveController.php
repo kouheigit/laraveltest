@@ -129,22 +129,48 @@ class fiveController extends Controller
 		DB::table('people')->insert($param);
 		return redirect('/five/db1');
 	}
-        //情報の更新の際に使用するメソット	
-	public function db9(Request $request)
+        //10S 10 10postの３つのメソットで値を更新する
+	public function db10S(Request $request)
 	{
-		$id = $request->input('id');
-		$start =1;
-		$start = $request->input('start');	
-		$name = $request->input('name');
-	        $mail = $request->input('mail');
-		$age = $request->input('age');
-		$items = DB::table('people')
-			->where('id',$request->id)->get();
-	 	 return view('five.db9',compact('items','start','name'));
+		return view("/five/db10S");
 	}
 
-	public function db9post(Request $request)
+	public function db10(Request $request)
 	{
+	  $form = DB::table('people')
+		  ->where('id',$request->id)->first();
+		return view('/five/db10',compact('form'));
+	}
+
+	public function db10post(Request $request)
+	{
+		$param = [
+			'name' =>$request->name,
+			'mail' =>$request->mail,
+			'age' =>$request->age,
+		];
+		DB::table('people')
+			->where('id',$request->id)
+			->update($param);
+		return redirect('/five/db1');
+	}
+
+	public function db11(Request $request)
+	{
+		return view("/five/db11");
+	}
+
+	public function db11get(Request $request)
+	{
+	   $form = DB::table('people')
+		   ->where('id',$request->id)->first();
+	       return view('/five/db11get',compact('form'));
+
+	}
+	public function db11post(Request $request)
+	{
+		DB::table('people')
+			->where('id',$request->id)->delete();
 		return redirect('/five/db1');
 	}
 
