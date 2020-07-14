@@ -475,8 +475,12 @@ class ComposerStaticInitbeb39b96e67a343ca7c9600c1ced8b9e
     );
 
     public static $classMap = array (
+        'App\\Board' => __DIR__ . '/../..' . '/app/Board.php',
+        'App\\Child' => __DIR__ . '/../..' . '/app/Child.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Http\\Controllers\\BoardController' => __DIR__ . '/../..' . '/app/Http/Controllers/BoardController.php',
+        'App\\Http\\Controllers\\ChildrenController' => __DIR__ . '/../..' . '/app/Http/Controllers/ChildrenController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\PersonController' => __DIR__ . '/../..' . '/app/Http/Controllers/PersonController.php',
         'App\\Http\\Controllers\\fiveController' => __DIR__ . '/../..' . '/app/Http/Controllers/fiveController.php',
@@ -4798,6 +4802,7 @@ class ComposerStaticInitbeb39b96e67a343ca7c9600c1ced8b9e
         'Whoops\\Util\\SystemFacade' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/SystemFacade.php',
         'Whoops\\Util\\TemplateHelper' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/TemplateHelper.php',
         'XdgBaseDir\\Xdg' => __DIR__ . '/..' . '/dnoegel/php-xdg-base-dir/src/Xdg.php',
+        'boards' => __DIR__ . '/../..' . '/database/seeds/boards.php',
         'childrenseeder' => __DIR__ . '/../..' . '/database/seeds/childrenseeder.php',
         'peopleseeder' => __DIR__ . '/../..' . '/database/seeds/peopleseeder.php',
         'phpDocumentor\\Reflection\\DocBlock' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlock.php',

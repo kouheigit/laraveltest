@@ -6,8 +6,12 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Board' => $baseDir . '/app/Board.php',
+    'App\\Child' => $baseDir . '/app/Child.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
+    'App\\Http\\Controllers\\BoardController' => $baseDir . '/app/Http/Controllers/BoardController.php',
+    'App\\Http\\Controllers\\ChildrenController' => $baseDir . '/app/Http/Controllers/ChildrenController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'App\\Http\\Controllers\\PersonController' => $baseDir . '/app/Http/Controllers/PersonController.php',
     'App\\Http\\Controllers\\fiveController' => $baseDir . '/app/Http/Controllers/fiveController.php',
@@ -4329,6 +4333,7 @@ return array(
     'Whoops\\Util\\SystemFacade' => $vendorDir . '/filp/whoops/src/Whoops/Util/SystemFacade.php',
     'Whoops\\Util\\TemplateHelper' => $vendorDir . '/filp/whoops/src/Whoops/Util/TemplateHelper.php',
     'XdgBaseDir\\Xdg' => $vendorDir . '/dnoegel/php-xdg-base-dir/src/Xdg.php',
+    'boards' => $baseDir . '/database/seeds/boards.php',
     'childrenseeder' => $baseDir . '/database/seeds/childrenseeder.php',
     'peopleseeder' => $baseDir . '/database/seeds/peopleseeder.php',
     'phpDocumentor\\Reflection\\DocBlock' => $vendorDir . '/phpdocumentor/reflection-docblock/src/DocBlock.php',
