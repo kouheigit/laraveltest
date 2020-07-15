@@ -126,3 +126,7 @@ Route::get('board','BoardController@index');
 Route::get('boardadd','BoardController@add');
 Route::post('boardadd','BoardController@create');
 
+Route::get('hasone','PersonController@hasone');
+
+Route::get('hasmany','PersonController@hasmany');
+

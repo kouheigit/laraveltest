@@ -26,4 +26,12 @@ class BoardController extends Controller
 		$board->fill($form)->save();
 		return redirect('/board');
 	}
+
+	public function hasone(Request $request)
+	{
+		$items = Board::all();
+		return view('Board.hasone',compact('items'));
+	}
+
+
 }

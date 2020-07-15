@@ -1,6 +1,6 @@
 @extends('person.layouts')
 
-<h1>OOKAWA Person</h1>
+<h1>OOKAWA Board</h1>
 
 @section('content')
   <table>

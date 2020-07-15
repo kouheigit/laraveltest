@@ -18,4 +18,5 @@ class Board extends Model
 	{
 		return $this->id . ':' . $this->title;
 	}
+	
 }

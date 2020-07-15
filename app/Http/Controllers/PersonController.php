@@ -113,5 +113,18 @@ class PersonController extends Controller
 		Person::find($request->id)->delete();
 		return redirect('/person');
 	}
+        //hasoneメソット
+	public function hasone(Request $request)
+        {
+                $items = Person::all();
+                return view('person.hasone',compact('items'));
+        }
+
+	public function hasmany(Request $request)
+        {
+                $items = Person::all();
+                return view('person.hasmany',compact('items'));
+        }
+
 
 }
