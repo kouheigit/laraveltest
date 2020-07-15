@@ -475,9 +475,14 @@ class ComposerStaticInitbeb39b96e67a343ca7c9600c1ced8b9e
     );
 
     public static $classMap = array (
+        'App\\Board' => __DIR__ . '/../..' . '/app/Board.php',
+        'App\\Child' => __DIR__ . '/../..' . '/app/Child.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Http\\Controllers\\BoardController' => __DIR__ . '/../..' . '/app/Http/Controllers/BoardController.php',
+        'App\\Http\\Controllers\\ChildrenController' => __DIR__ . '/../..' . '/app/Http/Controllers/ChildrenController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\PersonController' => __DIR__ . '/../..' . '/app/Http/Controllers/PersonController.php',
         'App\\Http\\Controllers\\fiveController' => __DIR__ . '/../..' . '/app/Http/Controllers/fiveController.php',
         'App\\Http\\Controllers\\fourthController' => __DIR__ . '/../..' . '/app/Http/Controllers/fourthController.php',
         'App\\Http\\Controllers\\thirdController' => __DIR__ . '/../..' . '/app/Http/Controllers/thirdController.php',
@@ -496,6 +501,7 @@ class ComposerStaticInitbeb39b96e67a343ca7c9600c1ced8b9e
         'App\\Http\\Requests\\vali3Request' => __DIR__ . '/../..' . '/app/Http/Requests/vali3Request.php',
         'App\\Http\\Requests\\valiXRequest' => __DIR__ . '/../..' . '/app/Http/Requests/valiXRequest.php',
         'App\\Http\\Validators\\HelloValidator' => __DIR__ . '/../..' . '/app/Http/Validators/HelloValidator.php',
+        'App\\Person' => __DIR__ . '/../..' . '/app/Person.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
@@ -4796,6 +4802,9 @@ class ComposerStaticInitbeb39b96e67a343ca7c9600c1ced8b9e
         'Whoops\\Util\\SystemFacade' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/SystemFacade.php',
         'Whoops\\Util\\TemplateHelper' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/TemplateHelper.php',
         'XdgBaseDir\\Xdg' => __DIR__ . '/..' . '/dnoegel/php-xdg-base-dir/src/Xdg.php',
+        'boards' => __DIR__ . '/../..' . '/database/seeds/boards.php',
+        'childrenseeder' => __DIR__ . '/../..' . '/database/seeds/childrenseeder.php',
+        'peopleseeder' => __DIR__ . '/../..' . '/database/seeds/peopleseeder.php',
         'phpDocumentor\\Reflection\\DocBlock' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlock.php',
         'phpDocumentor\\Reflection\\DocBlockFactory' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlockFactory.php',
         'phpDocumentor\\Reflection\\DocBlockFactoryInterface' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlockFactoryInterface.php',
